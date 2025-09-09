@@ -1,0 +1,20 @@
+replicaCount: 1
+
+image:
+  repository: my-spring-boot-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30080
+
+postgresql:
+  auth:
+    username: postgres
+    password: "12345678"
+    database: banktransaction
+  primary:
+    persistence:
+      enabled: false

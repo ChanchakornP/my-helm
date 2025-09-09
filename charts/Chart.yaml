@@ -1,0 +1,11 @@
+apiVersion: v2
+name: my-chart
+description: Helm chart for Spring Boot banktransaction app with PostgreSQL
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
+dependencies:
+  - name: postgresql
+    version: 15.*          # choose a range or exact version
+    repository: "https://charts.bitnami.com/bitnami"
